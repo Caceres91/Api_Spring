@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Integer id;
     @Column(nullable = false)
@@ -17,17 +17,9 @@ public class User {
     @Column(nullable = false)
     private String username;
     @Column(nullable = false)
-    private String paswword;
+    private String password;
     @Column(nullable = false)
     private String imagen;
-
-    public User(String nombre, String apellido, String username, String paswword, String imagen) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.username = username;
-        this.paswword = paswword;
-        this.imagen = imagen;
-    }
 
     public Integer getId() {
         return id;
@@ -61,12 +53,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPaswword() {
-        return paswword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPaswword(String paswword) {
-        this.paswword = paswword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getImagen() {
