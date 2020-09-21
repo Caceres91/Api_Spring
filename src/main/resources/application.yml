@@ -1,24 +1,15 @@
 server:
-  port: 4000
+  port: 2020
 
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3310/DW
     username: root
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate: org.hibernate.dialect.MySQL5Dialect
-#    show-sql: true
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3310/DW
-#    username: root
-#    password: root
